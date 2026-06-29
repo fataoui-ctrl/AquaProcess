@@ -75,19 +75,32 @@
         <!-- ===== Colonne formulaire ===== -->
         <div>
           <!--
-            Ce formulaire est juste la structure HTML : il ne fait rien
-            tout seul sans service externe (ex. Formspree, EmailJS).
-            Si tu veux qu'il envoie réellement des messages, dis-le moi
-            et je t'aide à le connecter.
+            Formulaire connecté à Netlify Forms : aucun service externe
+            ni code serveur nécessaire. Netlify détecte ce formulaire au
+            moment du déploiement grâce à data-netlify="true".
           -->
-          <form class="formulaire">
+          <form
+            class="formulaire"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/contact-merci.html"
+          >
+            <input type="hidden" name="form-name" value="contact">
+
+            <!-- Piège anti-robot, invisible pour un humain -->
+            <p style="display:none;">
+              <label>Ne pas remplir si vous êtes humain : <input name="bot-field"></label>
+            </p>
+
             <div class="champ">
               <label for="nom">Nom</label>
-              <input type="text" id="nom" name="nom">
+              <input type="text" id="nom" name="nom" required>
             </div>
             <div class="champ">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email">
+              <input type="email" id="email" name="email" required>
             </div>
             <div class="champ">
               <label for="sujet">Sujet</label>
@@ -95,7 +108,7 @@
             </div>
             <div class="champ">
               <label for="message">Message</label>
-              <textarea id="message" name="message"></textarea>
+              <textarea id="message" name="message" required></textarea>
             </div>
             <button type="submit" class="bouton bouton-principal">Envoyer le message</button>
           </form>
