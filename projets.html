@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-projets — AquaProcess</title>
+  <meta name="description" content="Mini-projets en traitement de l'eau, environnement et génie chimique, présentés en études de cas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="entete">
+    <div class="conteneur">
+      <a href="index.html" class="logo">Aqua<span>Process</span></a>
+      <nav class="nav-principale">
+        <a href="index.html">Accueil</a>
+        <a href="articles.html">Articles</a>
+        <a href="projets.html" class="actif">Mini-projets</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-burger" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero" style="padding: 56px 0 40px;">
+    <div class="conteneur">
+      <span class="hero-etiquette">Mini-projets</span>
+      <h1 style="font-size: 30px;">Mes mini-projets</h1>
+      <p>
+        Des projets concrets présentés comme des études de cas : contexte,
+        démarche / procédé utilisé, résultats obtenus, et ce que j'en ai retenu.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="conteneur">
+
+      <div class="filtres">
+        <button class="filtre actif">Tous</button>
+        <button class="filtre">Traitement de l'eau</button>
+        <button class="filtre">Environnement</button>
+        <button class="filtre">Génie chimique</button>
+      </div>
+
+      <div class="grille-cartes" id="liste-projets">
+        <p>Chargement…</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="pied-page">
+    <div class="conteneur">
+      <span class="pied-copyright">© 2026 AquaProcess — Abdessamad Fataoui</span>
+      <div class="pied-liens">
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="css/script.js"></script>
+  <script src="css/contenu-dynamique.js"></script>
+  <script>
+    AquaProcessContenu.afficherListe("projets", "liste-projets");
+  </script>
+</body>
+</html>

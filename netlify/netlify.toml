@@ -1,0 +1,11 @@
+# Configuration Netlify pour AquaProcess
+
+[build]
+  functions = "netlify/functions"
+  publish = "."
+
+# Raccourci : /api/liste-contenu au lieu de l'URL longue par défaut
+[[redirects]]
+  from = "/api/liste-contenu"
+  to = "/.netlify/functions/liste-contenu"
+  status = 200

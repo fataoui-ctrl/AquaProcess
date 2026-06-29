@@ -1,0 +1,72 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Dossier où Decap CMS stocke les photos uploadées
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Active l'éditeur en français
+locale: "fr"
+
+collections:
+
+  # ===========================================================
+  # Collection ARTICLES
+  # ===========================================================
+  - name: "articles"
+    label: "Articles"
+    label_singular: "Article"
+    folder: "content/articles"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{titre}}"
+    fields:
+      - { label: "Titre", name: "titre", widget: "string" }
+      - label: "Thème"
+        name: "theme"
+        widget: "select"
+        options: ["Traitement de l'eau", "Environnement", "Génie chimique"]
+      - { label: "Résumé court", name: "resume", widget: "text" }
+      - label: "Image de couverture"
+        name: "image_couverture"
+        widget: "image"
+        required: false
+      - { label: "Date de publication", name: "date", widget: "datetime" }
+      - label: "Contenu de l'article"
+        name: "body"
+        widget: "markdown"
+        media_folder: "images/uploads"
+        public_folder: "/images/uploads"
+
+  # ===========================================================
+  # Collection MINI-PROJETS
+  # ===========================================================
+  - name: "projets"
+    label: "Mini-projets"
+    label_singular: "Mini-projet"
+    folder: "content/projets"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{titre}}"
+    fields:
+      - { label: "Titre", name: "titre", widget: "string" }
+      - label: "Thème"
+        name: "theme"
+        widget: "select"
+        options: ["Traitement de l'eau", "Environnement", "Génie chimique"]
+      - label: "Type de projet"
+        name: "type_projet"
+        widget: "select"
+        options: ["Projet académique", "Stage", "Personnel"]
+      - { label: "Résumé court", name: "resume", widget: "text" }
+      - label: "Image de couverture"
+        name: "image_couverture"
+        widget: "image"
+        required: false
+      - { label: "Période", name: "periode", widget: "string", required: false }
+      - label: "Contenu du projet"
+        name: "body"
+        widget: "markdown"
+        media_folder: "images/uploads"
+        public_folder: "/images/uploads"

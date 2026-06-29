@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article — AquaProcess</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="entete">
+    <div class="conteneur">
+      <a href="../index.html" class="logo">Aqua<span>Process</span></a>
+      <nav class="nav-principale">
+        <a href="../index.html">Accueil</a>
+        <a href="../articles.html" class="actif">Articles</a>
+        <a href="../projets.html">Mini-projets</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <button class="menu-burger" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="conteneur">
+      <p class="fil-ariane">
+        <a href="../index.html">Accueil</a> /
+        <a href="../articles.html">Articles</a>
+      </p>
+
+      <!-- Le contenu de l'article est injecté ici automatiquement -->
+      <div id="zone-detail-article">
+        <p>Chargement…</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="pied-page">
+    <div class="conteneur">
+      <span class="pied-copyright">© 2026 AquaProcess — Abdessamad Fataoui</span>
+      <div class="pied-liens">
+        <a href="../contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+  <script src="../css/script.js"></script>
+  <script src="../css/contenu-dynamique.js"></script>
+  <script>
+    AquaProcessContenu.afficherDetail("articles", "zone-detail-article");
+  </script>
+</body>
+</html>

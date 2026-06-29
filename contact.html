@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — AquaProcess</title>
+  <meta name="description" content="Me contacter pour un stage, un emploi ou une collaboration.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="entete">
+    <div class="conteneur">
+      <a href="index.html" class="logo">Aqua<span>Process</span></a>
+      <nav class="nav-principale">
+        <a href="index.html">Accueil</a>
+        <a href="articles.html">Articles</a>
+        <a href="projets.html">Mini-projets</a>
+        <a href="contact.html" class="actif">Contact</a>
+      </nav>
+      <button class="menu-burger" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero" style="padding: 56px 0 40px;">
+    <div class="conteneur">
+      <span class="hero-etiquette">Contact</span>
+      <h1 style="font-size: 30px;">Discutons</h1>
+      <p>
+        <!-- TODO : remplace cette phrase par ton propre message -->
+        Tu peux me contacter pour un stage, une opportunité, ou simplement pour
+        échanger autour de l'eau, l'environnement et le génie chimique.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="conteneur">
+      <div class="contact-grille">
+
+        <!-- ===== Colonne infos de contact — À REMPLIR ===== -->
+        <div class="contact-info">
+          <h2>Mes coordonnées</h2>
+          <p><!-- TODO : phrase d'intro libre, optionnelle --></p>
+
+          <div class="contact-lien-item">
+            <span class="icone">✉</span>
+            <!-- TODO : remplace par ton email -->
+            <a href="mailto:ton.email@exemple.com">fataoui197@gmail.com</a>
+          </div>
+
+          <div class="contact-lien-item">
+            <span class="icone">in</span>
+            <!-- TODO : remplace par ton lien LinkedIn -->
+            <a href="https://www.linkedin.com/in/ton-profil" target="_blank" rel="noopener">Abdessamad Fataoui</a>
+          </div>
+
+          <div class="contact-lien-item">
+            <span class="icone">📍</span>
+            <!-- TODO : remplace par ta ville / région -->
+            <span>Casablanca, Morocco</span>
+          </div>
+
+          <div class="contact-lien-item">
+            <span class="icone">📄</span>
+            <!-- TODO : optionnel, lien vers un CV ou retire cette ligne -->
+            <a href="#">Télécharger mon CV</a>
+          </div>
+        </div>
+
+        <!-- ===== Colonne formulaire ===== -->
+        <div>
+          <!--
+            Ce formulaire est juste la structure HTML : il ne fait rien
+            tout seul sans service externe (ex. Formspree, EmailJS).
+            Si tu veux qu'il envoie réellement des messages, dis-le moi
+            et je t'aide à le connecter.
+          -->
+          <form class="formulaire">
+            <div class="champ">
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" name="nom">
+            </div>
+            <div class="champ">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email">
+            </div>
+            <div class="champ">
+              <label for="sujet">Sujet</label>
+              <input type="text" id="sujet" name="sujet">
+            </div>
+            <div class="champ">
+              <label for="message">Message</label>
+              <textarea id="message" name="message"></textarea>
+            </div>
+            <button type="submit" class="bouton bouton-principal">Envoyer le message</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="pied-page">
+    <div class="conteneur">
+      <span class="pied-copyright">© 2026 AquaProcess — Fataoui Abdessamad</span>
+      <div class="pied-liens">
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="css/script.js"></script>
+</body>
+</html>

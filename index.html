@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AquaProcess — Traitement de l'eau et Procédés industriels & ingénierie environnementale</title>
+  <meta name="description" content="Articles et mini-projets sur le traitement de l'eau, la chimie des procédés et l'ingénierie environnementale.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&family=Roboto+Slab:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== En-tête / Navigation ===== -->
+  <header class="entete">
+    <div class="conteneur">
+      <a href="index.html" class="logo">Aqua<span>Process</span></a>
+      <nav class="nav-principale">
+        <a href="index.html" class="actif">Accueil</a>
+        <a href="articles.html">Articles</a>
+        <a href="projets.html">Mini-projets</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-burger" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Bannière d'accueil ===== -->
+  <section class="hero">
+    <canvas id="canvas-molecules" class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="conteneur">
+      <span class="hero-etiquette">Étudiant en génie chimique</span>
+      <h1>Abdessamad Fataoui — Traitement de l'eau et Procédés industriels & ingénierie environnementale</h1>
+      <p>
+        Je partage ici mes articles et mes mini-projets autour des procédés
+        de traitement de l'eau, de la chimie des procédés et de l'environnement.
+        Un espace pour montrer ma façon de comprendre et résoudre des problèmes techniques.
+      </p>
+      <div class="hero-actions">
+        <a href="projets.html" class="bouton bouton-principal">Voir mes mini-projets</a>
+        <a href="articles.html" class="bouton bouton-secondaire">Lire mes articles</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Domaines d'intérêt ===== -->
+  <section class="section">
+    <div class="conteneur">
+      <div class="section-entete">
+        <h2>Mes domaines d'intérêt</h2>
+      </div>
+      <div class="bandeau-competences">
+        <div class="competence-item">
+          <div class="icone">💧</div>
+          <h4>Traitement de l'eau</h4>
+          <p>Potabilisation, eaux usées, procédés membranaires</p>
+        </div>
+        <div class="competence-item">
+          <div class="icone">⚗️</div>
+          <h4>Génie chimique</h4>
+          <p>Procédés industriels, bilans matière et énergie</p>
+        </div>
+        <div class="competence-item">
+          <div class="icone">🌍</div>
+          <h4>Environnement</h4>
+          <p>Pollution, dépollution, gestion durable des ressources</p>
+        </div>
+        <div class="competence-item">
+          <div class="icone">📊</div>
+          <h4>Analyse & données</h4>
+          <p>Modélisation, simulation, optimisation de procédés</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Derniers articles ===== -->
+  <section class="section section-grise">
+    <div class="conteneur">
+      <div class="section-entete">
+        <h2>Derniers articles</h2>
+        <a href="articles.html" class="lien-voir-tout">Voir tous les articles →</a>
+      </div>
+      <p class="section-intro">
+        Mes réflexions et analyses sur des sujets techniques et d'actualité liés
+        à l'eau, l'environnement et la chimie des procédés.
+      </p>
+
+      <div class="grille-cartes" id="accueil-liste-articles">
+        <p>Chargement…</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Mini-projets en avant ===== -->
+  <section class="section">
+    <div class="conteneur">
+      <div class="section-entete">
+        <h2>Mini-projets</h2>
+        <a href="projets.html" class="lien-voir-tout">Voir tous les projets →</a>
+      </div>
+      <p class="section-intro">
+        Des projets concrets, présentés sous forme d'étude de cas : contexte,
+        démarche, résultats et ce que j'en ai retenu.
+      </p>
+
+      <div class="grille-cartes" id="accueil-liste-projets">
+        <p>Chargement…</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Pied de page ===== -->
+  <footer class="pied-page">
+    <div class="conteneur">
+      <span class="pied-copyright">© 2026 AquaProcess — Abdessamad Fataoui</span>
+      <div class="pied-liens">
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="css/script.js"></script>
+  <script src="css/molecules.js"></script>
+  <script src="css/contenu-dynamique.js"></script>
+  <script>
+    AquaProcessContenu.afficherListe("articles", "accueil-liste-articles");
+    AquaProcessContenu.afficherListe("projets", "accueil-liste-projets");
+  </script>
+</body>
+</html>
